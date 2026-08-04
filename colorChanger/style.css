@@ -5,6 +5,7 @@ h1{
 body{
   justify-content: center;
   justify-items: center;
+  background-color: white;
 }
 .button{
   justify-items: center;
