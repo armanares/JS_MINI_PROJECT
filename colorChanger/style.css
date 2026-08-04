@@ -1,0 +1,29 @@
+h1{
+  text-align: center;
+  
+}
+body{
+  justify-content: center;
+  justify-items: center;
+}
+.button{
+  justify-items: center;
+  height: 200px;
+  width: 300px;
+  margin:10px;
+  border : 3px solid black;
+  
+}
+#pink{
+  margin-left: 112px;
+  background-color:pink;
+}
+#red{
+  background-color: red;
+}
+#blue{
+  background-color: blue;
+}
+#green{
+  background-color: green;
+}
