@@ -4,6 +4,8 @@ const body = document.querySelector('body')
 
 buttons.forEach( (button) => {
   button.addEventListener('click' , (e)=>{
+
+    
       if(e.target.id === 'pink') {
         body.style.backgroundColor ="pink";
       }
@@ -19,5 +21,8 @@ buttons.forEach( (button) => {
       if(e.target.id === 'green') {
         body.style.backgroundColor = e.target.id ;
       }
-  })
+      
+  });
 });
+
+
