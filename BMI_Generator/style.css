@@ -1,0 +1,103 @@
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #a43058, #907792);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body > div{
+    background: #fff;
+    width: 400px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus{
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,0.3);
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover{
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+#result{
+    margin-top: 25px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+h1 + p{
+    margin-top: 10px;
+}
+
+form div:last-child{
+    margin-top: 30px;
+}
+
+form div:last-child h1{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+form div:last-child p{
+    color: #555;
+    margin: 8px 0;
+    font-size: 15px;
+} */
