@@ -1,14 +1,7 @@
 
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
 body{
-    background: linear-gradient(135deg, #a43058, #907792);
+    background-color: #a43058;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -100,4 +93,4 @@ form div:last-child p{
     color: #555;
     margin: 8px 0;
     font-size: 15px;
-} */
+} 
