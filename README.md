@@ -55,6 +55,13 @@ A fun number guessing game where the user has to guess a randomly generated numb
 
 I created these projects to practice JavaScript basics, especially DOM manipulation, events, functions, and working with user input.
 
+
 # Author ->  MD ARMAN ANSARI
+
+## 📊 GitHub Activity
+
+[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=armanares&theme=github-compact)](https://github.com/armanares)
+
+
 
 
