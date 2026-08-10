@@ -11,6 +11,7 @@ const startOver = document.querySelector('.resultParas')
 const lowOrHigh = document.querySelector('.lowOrHi')
 
 let p = document.createElement('p');
+p.classList.add('newGame')
 
 
 let prevGuess = []
@@ -79,6 +80,7 @@ function endGame() {
   playGame = false
   newGame();
 }
+
 
 function newGame() {
   
