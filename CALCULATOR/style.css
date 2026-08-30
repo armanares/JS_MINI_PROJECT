@@ -7,16 +7,15 @@
 body {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #eee7e7;
-    font-family: Arial, sans-serif;
 }
 
 .calculator {
     width: 320px;
     padding: 20px;
-    background-color: #d6b3b3;
+    background-color: #918a8a;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }

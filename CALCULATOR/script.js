@@ -44,13 +44,21 @@ numbers.forEach(button => {
 
     button.addEventListener("click", () => {
 
+        if(result !== "") {
+            firstNum = "";
+            operator = "";
+            secondNum = "";
+            result = "";
+            display.textContent = "0";
+        }
+
         if (operator === "") {
             firstNum += button.textContent;
             display.textContent = firstNum;
         } 
         else {
             secondNum += button.textContent;
-            display.textContent += secondNum;
+            display.textContent = firstNum + operator + secondNum;
         }
 
     });
@@ -70,7 +78,7 @@ operators.forEach(button => {
 
 equals.addEventListener("click", () => {
 
-    const result = operate(
+        result = operate(
         operator,
         Number(firstNum),
         Number(secondNum)
