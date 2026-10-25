@@ -20,8 +20,7 @@ const Gameboard = (() => {
     };
 })();
 
-// Gameboard.setboard(0, "X");
-// console.log(Gameboard.getboard());
+
 
 const Player = (name, symbol) => {
     return { name, symbol };
@@ -31,9 +30,6 @@ const boardfull = () => {
   const board = Gameboard.getboard();
   return board.every(cell => cell !== "")
 };
-
-// const player1 = Player("Player 1", "X");
-// const player2 = Player("Player 2", "O");
 
 function checkWinner() {
   const board = Gameboard.getboard();
@@ -113,44 +109,62 @@ const GameController = (() => {
 
 })();
 
+const ScreenController = (() => {
+  const cells = document.querySelectorAll(".cell");
+  const status = document.querySelector("#status");
+  const restartButton = document.querySelector("#restart");
 
-const cells = document.querySelectorAll(".cell");
-const status = document.querySelector("#status");
-const restartButton = document.querySelector("#restart");
+  const updateBoard = () => {
+    cells.forEach((cell, index) => {
+        cell.textContent = Gameboard.getboard()[index];
+    });
+  };
 
+  const updateStatus = (message) => {
+    status.textContent = message;
+};
 
-
-cells.forEach((cell, index) => {
+  cells.forEach((cell, index) => {
     cell.addEventListener("click", () => {
 
       const validmove = GameController.playRound(index);
 
       if(!validmove) return;
     
-       cell.textContent = Gameboard.getboard()[index];
+       updateBoard();
        const winner = checkWinner();
-       const winningPlayer = GameController.getPlayerBySymbol(winner);
+       
 
         if(winner) {
-            status.textContent = ` ${winningPlayer.name}  "${winner}"wins! 🏆🤩🎖️`;
+            const winningPlayer = GameController.getPlayerBySymbol(winner);
+            updateStatus(`${winningPlayer.name} (${winner}) wins! 🏆🤩🎖️`);
           }
         else if (boardfull()) {
-            status.textContent = "It's a draw! 🤝 " ;
+            updateStatus("It's a draw! 🤝 ");
         }
         else {
-            status.textContent = `${GameController.getCurrentPlayer().name}'s turn`;
+            updateStatus(`${GameController.getCurrentPlayer().name}'s turn`);
         }
     });
-});
+  });
 
-restartButton.addEventListener("click", () => {
+  restartButton.addEventListener("click", () => {
     Gameboard.reset();
     GameController.reset();
 
-    cells.forEach(cell => cell.textContent = "");
+    updateBoard();
+    updateStatus(`${GameController.getCurrentPlayer().name}'s turn`);
 
-    status.textContent =
-        `${GameController.getCurrentPlayer().name}'s turn`;
-});
+  });
 
-status.textContent = `${GameController.getCurrentPlayer().name}'s turn`;
+return {
+    updateBoard,
+    updateStatus
+}
+
+
+})();
+
+
+
+ScreenController.updateStatus(`${GameController.getCurrentPlayer().name}'s turn`);
