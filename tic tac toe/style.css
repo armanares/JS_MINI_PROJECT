@@ -1,0 +1,118 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: #191919;
+    color: #F2EBDD;
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+.cell {
+    background-color: #242424;
+    color: #F2EBDD;
+    border: 1px solid #393630;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #302B26;
+    border-color: #D98B55;
+}
+
+.cell:active {
+    transform: scale(0.96);
+}
+
+
+#status {
+    min-height: 24px;
+    margin: 15px 0 20px;
+    color: #B5B0A6;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+#restart {
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #D98B55;
+    border: 1px solid #D98B55;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+#restart:hover {
+    background-color: #D98B55;
+    color: #191919;
+}
+
+
+.cell:focus-visible,
+#restart:focus-visible {
+    outline: 2px solid #D98B55;
+    outline-offset: 3px;
+}
+
+
+@media (max-width: 400px) {
+    #gameboard {
+        grid-template-columns: repeat(3, min(25vw, 100px));
+        grid-template-rows: repeat(3, min(25vw, 100px));
+        gap: 7px;
+    }
+
+    .cell {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        letter-spacing: 1px;
+    }
+}
